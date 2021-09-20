@@ -3,11 +3,7 @@ from flask import Flask, render_template, request
 import numpy as np
 import keras.models
 import re
-import sys 
-import os
 import base64
-sys.path.append(os.path.abspath("./model"))
-#from load_model import * 
 
 from keras.models import model_from_json
 from PIL import Image
@@ -16,12 +12,6 @@ from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 from keras.models import model_from_json 
 import PIL.ImageOps
-
-#Initialize the useless part of the base64 encoded image.
-init_Base64 = 21
-
-global graph, model
-
 
 app = Flask(__name__)
 
